@@ -1,0 +1,24 @@
+{
+"compilerOptions": {
+"target": "ES2022",
+"module": "ESNext",
+"lib": ["ES2022", "DOM"],
+"moduleResolution": "Bundler",
+"baseUrl": ".",
+"paths": {
+"@/*": ["src/*"]
+},
+"noEmit": true,
+"strict": true,
+"noUncheckedIndexedAccess": true,
+"exactOptionalPropertyTypes": true,
+"noFallthroughCasesInSwitch": true,
+"noImplicitOverride": true,
+"noPropertyAccessFromIndexSignature": true,
+"useDefineForClassFields": true,
+"forceConsistentCasingInFileNames": true,
+"skipLibCheck": true
+},
+"include": ["src", "tests", "bench", "vite.config.ts"],
+"exclude": ["dist", "node_modules"]
+}
