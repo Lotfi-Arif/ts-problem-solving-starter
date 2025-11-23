@@ -1,5 +1,6 @@
 import { bench, describe } from 'vitest';
 import { chunk_loop, chunk_map, chunk_reduce } from '@/problems/chunk/impl_baseline';
+import { chunk_gen } from '@/problems/chunk/impl_alt';
 // import { randomArrays } from '@/problems/utils/gen';
 
 describe('chunk benches', () => {
@@ -13,5 +14,8 @@ describe('chunk benches', () => {
   });
   bench('baseline reduce', () => {
     chunk_reduce(xs, 3);
+  });
+  bench('lazy yield chunk', () => {
+    chunk_gen(xs, 3);
   });
 });
